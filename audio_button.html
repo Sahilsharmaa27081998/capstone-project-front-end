@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Audio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="8087076-uhd_2160_3840_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="audio-capture-container">
+        <h2>Capture Audio and Convert to Text</h2>
+        <button id="startRecordBtn" onclick="startRecording()">Start Recording</button>
+        <button id="stopRecordBtn" onclick="stopRecording()" disabled>Stop Recording</button>
+        <div id="results" style="display:none;">
+            <h3>Prediction Results</h3>
+            <p><strong>Quality:</strong> <span id="qualityScore"></span></p>
+            <p><strong>Clarity:</strong> <span id="clarityScore"></span></p>
+            <p><strong>Competence:</strong> <span id="competenceScore"></span></p>
+            <h3>Corrected Speech</h3>
+            <p id="correctedSpeech"></p>
+            <h3>Transcribed Speech</h3>
+            <p id="transcribedSpeech"></p>
+
+        </div>
+    </div>
+    <script src="audio_js.js"></script>
+</body>
+</html>
